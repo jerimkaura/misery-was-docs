@@ -46,3 +46,21 @@ See the `.gitmodules` file in the source repository.
 
 These are linked as `Git Submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_:
     Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
+
+To add a submodule, run: `git submodule add git@github.com:jerimkaura/misery-was-docs.git`
+
+If a submodule already exists, run `git submodule init` and `git submodule update`.
+
+Branch Protection Rules
+-----------------------
+
+`Docs on branch protection rules <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule>`_
+
+The following rules are in place:
+
+1. Require a pull request before merging (at least 1 approval)
+2. Require status checks to pass before merging (branches must be up to date before merging)
+3. Require conversation resolution before merging
+4. Require linear history (`Rebase & merge` or `Squash & merge`)
+
+Linear history: `A Git Workflow for Agile Teams <http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html>`_ & `Git team workflows: merge or rebase? <https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase>`_.
