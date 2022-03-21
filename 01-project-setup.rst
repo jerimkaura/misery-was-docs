@@ -64,3 +64,21 @@ The following rules are in place:
 4. Require linear history (`Rebase & merge` or `Squash & merge`)
 
 Linear history: `A Git Workflow for Agile Teams <http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html>`_ & `Git team workflows: merge or rebase? <https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase>`_.
+
+
+Code Formatting and Automated Testing
+-------------------------------------
+
+The project uses `Flake8`, `Black`` , `Isort`` and `Mypy`` for formating code into 
+conventional starndards. The tools are setup using `pre-commit hook <https://pre-commit.com/>`_ to run before commits 
+done.
+
+To setup the hooks, run:
+
+- `poetry add pre-commit`
+- create a file named `.pre-commit-config.yaml`
+- run `pre-commit install` to set up the git hook scripts
+- `poetry run pre-commit` to test formatting and Testing
+
+In addition, the github actions perfoms Testing of the code upon every push or pull.
+
